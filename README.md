@@ -1,119 +1,102 @@
-Solar System – Happy New Year 2026
+Solar System Simulation – Happy New Year 2026 🎉
 
-A visually rich, interactive HTML/CSS/JavaScript Solar System simulation celebrating Earth’s real revolution around the Sun and welcoming New Year 2026.
-The project combines orbital mechanics inspiration, parallax effects, background music, and responsive design into a single self-contained web experience.
+An interactive HTML, CSS & JavaScript project that visually demonstrates the Earth completing one full revolution around the Sun, followed by a Happy New Year 2026 celebration.
 
-✨ Features:
+This project combines astronomy, animation, and celebration, making it ideal for learning, showcasing, and sharing.
 
-☀️ Realistic Solar System Layout:
+✨ Features
 
-    Sun at the center with 8 planets
-    
-    Relative orbit distances and speeds based on real orbital periods
-    
-    Moon orbiting Earth
+☀️ Realistic solar system layout
 
-🌀 Smooth Orbital Animations;
+🪐 All 8 planets with proportional orbits
 
-    CSS-based rotations with adjustable speed
-    
-    Each planet’s orbit speed scales proportionally
+🌍 Earth revolution detection
 
-🎛 Interactive Controls;
+🌕 Moon orbiting Earth
 
-    Orbit speed controller
-    
-    Background music play/pause
-    
-    Volume control
+🎉 Happy New Year 2026 popup after one Earth year
 
-🧭 3D Parallax Effect:
+🎶 Background music with volume control
 
-    Mouse movement rotates the scene in 3D space
-    
-    Adds depth and realism
+⏱ Orbit speed control
 
-🎉 New Year Celebration Message:
+🧭 3D parallax effect using mouse movement
 
-    Triggered when Earth completes one full revolution
-    
-    Animated celebratory message
+📱 Fully responsive design
 
-📱 Fully Responsive:  
+📁 Project Structure
 
-    Scales perfectly across desktop, tablet, and mobile screens
+realistic-solar-system/
+├── index.html — Main HTML file
+├── style.css — Styling and animations
+├── script.js — Logic and interactions
+└── README.md — Documentation
 
-🎶 Background Space Music:
+🚀 How to Run
 
-    Ambient looping audio for immersion
+Clone the repository
+git clone https://github.com/your-username/realistic-solar-system.git
 
-🛠 Technologies Used:
-    
-    HTML5 – Structure
-    
-    CSS3
-    
-    Animations & keyframes
-    
-    Gradients & shadows
-    
-    3D transforms
-    
-    Vanilla JavaScript
-    
-    Orbit speed control
-    
-    Event handling
-    
-    Dynamic resizing
-    
-    No external frameworks required
+Open index.html in any modern web browser
+(Chrome, Edge, or Firefox recommended)
 
-📂 Project Structure:
-    .
-    ├── index.html        # Main HTML file (includes CSS & JS)
-    ├── README.md         # Project documentation
+No installation or build tools required.
 
+🎮 Controls
 
-⚠️ This project is intentionally self-contained in a single HTML file for easy sharing and deployment.
+⏱ Speed Slider — Adjusts planetary orbit speed
+🎵 Play / Pause — Toggles background music
+🔊 Volume Slider — Controls audio volume
+🖱 Mouse Movement — 3D parallax rotation
 
-🚀 How to Run:
-    Click on the link: https://ggthedeveloper.github.io/Solar-System-Simulation-HNY-2026/
+🧠 Educational Value
 
-🎮 Controls Guide:
-    Control	Description:
-    ⏱ Speed Slider	Adjusts orbital speed of all planets
-    🎵 Play / Pause	Toggles background music
-    🔊 Volume Slider	Controls music volume
-    🖱 Mouse Move	Rotates the solar system in 3D
-    🌍 Educational Note
+This project helps visualize:
 
-Planet speeds are scaled proportionally using real orbital periods (Mercury → Neptune).
-This provides a visually accurate relative motion while remaining aesthetically pleasing.
+Planetary orbits
 
-🧠 Customization Ideas:
-    
-    Add asteroid belt
-    
-    Include planet labels
-    
-    Add zoom controls
-    
-    Replace music with your own audio
-    
-    Add touch controls for mobile
-    
-    Convert to Three.js for true 3D rendering
+Relative orbital periods
 
-👤 Author:
+Earth’s annual revolution
+
+Moon–Earth orbital relationship
+
+Useful for:
+
+Physics & astronomy demonstrations
+
+Web animation practice
+
+Student and developer portfolios
+
+🛠 Technologies Used
+
+HTML5
+
+CSS3 (animations, gradients, 3D transforms)
+
+Vanilla JavaScript
+
+No external libraries
+
+👨‍💻 Author
 
 Gaurav Gautam
-
+Engineering Physics Student
+Web Development & Visualization Enthusiast
 
 📜 License
 
-This project is open for learning, personal use, and creative experimentation.
-Feel free to fork, modify, and share with attribution.
+This project is open-source and free to use for:
 
-🌟 “One revolution, one year, endless possibilities.” 🌍
-            Happy New Year 2026! 🎆
+Learning
+
+Demonstrations
+
+Personal projects
+
+Attribution is appreciated.
+
+🌟 Concept
+
+“When Earth completes one revolution, welcome the New Year in space!”
