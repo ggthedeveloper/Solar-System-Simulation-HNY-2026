@@ -78,21 +78,7 @@ The project combines orbital mechanics inspiration, parallax effects, background
 ⚠️ This project is intentionally self-contained in a single HTML file for easy sharing and deployment.
 
 🚀 How to Run:
-
-    Download or clone the repository:
-    
-    git clone https://github.com/your-username/realistic-solar-system-2026.git
-    
-    
-    Open the project:
-    
-    Simply double-click index.html
-    
-    Or open it in any modern web browser (Chrome, Edge, Firefox, Safari)
-    
-    (Optional) Serve locally:
-    
-    npx serve
+    Click on the link: https://ggthedeveloper.github.io/Solar-System-Simulation-HNY-2026/
 
 🎮 Controls Guide:
     Control	Description:
@@ -122,7 +108,7 @@ This provides a visually accurate relative motion while remaining aesthetically 
 👤 Author:
 
 Gaurav Gautam
-Creative front-end & visual web experiment
+
 
 📜 License
 
@@ -130,4 +116,4 @@ This project is open for learning, personal use, and creative experimentation.
 Feel free to fork, modify, and share with attribution.
 
 🌟 “One revolution, one year, endless possibilities.” 🌍
-Happy New Year 2026! 🎆
+            Happy New Year 2026! 🎆
