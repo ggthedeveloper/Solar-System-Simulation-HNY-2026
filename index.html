@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Solar System – Happy New Year 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="controls">
+  ⏱ Speed <input type="range" min=".2" max="5" step=".1" value="1" id="speed">
+  <br>
+  <button id="musicBtn">Play Music</button>
+  🔊 <input type="range" min="0" max="1" step=".05" value=".2" id="volume">
+</div>
+
+<div class="stars"></div>
+
+<div class="scene" id="scene">
+  <div class="system">
+    <div class="sun"></div>
+
+    <div class="orbit" data-size=".17" data-base=".24"><div class="planet mercury"></div></div>
+    <div class="orbit" data-size=".22" data-base=".62"><div class="planet venus"></div></div>
+
+    <div class="orbit earth-orbit" data-size=".28" data-base="1">
+      <div class="planet earth">
+        <div class="moon-orbit">
+          <div class="moon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="orbit" data-size=".33" data-base="1.88"><div class="planet mars"></div></div>
+    <div class="orbit" data-size=".44" data-base="11.86"><div class="planet jupiter"></div></div>
+    <div class="orbit" data-size=".53" data-base="29.4"><div class="planet saturn"></div></div>
+    <div class="orbit" data-size=".64" data-base="84"><div class="planet uranus"></div></div>
+    <div class="orbit" data-size=".75" data-base="165"><div class="planet neptune"></div></div>
+  </div>
+</div>
+
+<div class="message" id="msg">
+  <h1>🎉 Happy New Year 2026 🎉</h1>
+  <p>Earth completed one real revolution around the Sun</p>
+  <p style="margin-top:10px;color:#49e62e">Created by: Gaurav Gautam</p>
+</div>
+
+<audio id="bgMusic" loop>
+  <source src="https://cdn.freesound.org/previews/670/670094_5479102-lq.mp3">
+</audio>
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>
