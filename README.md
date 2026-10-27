@@ -1,120 +1,46 @@
+# 🪐 Solar System Simulation – Happy New Year 2026
 
-# 🌌 Solar System – Happy New Year 2026
-
-A visually rich, interactive **HTML / CSS / JavaScript** Solar System simulation celebrating Earth’s real revolution around the Sun and welcoming **New Year 2026**.
-
-The project combines orbital mechanics inspiration, parallax effects, background music, and responsive design into a single **self-contained web experience**.
+An interactive, responsive 3D Solar System simulation celebrating **Happy New Year 2026**. Features proportional Keplerian orbital velocities, interactive mouse and touch parallax, celestial ambient audio with offline synthesis fallback, and interactive planet cards.
 
 ---
 
 ## ✨ Features
 
-### ☀️ Realistic Solar System Layout
-- Sun at the center with **8 planets**
-- Relative orbit distances and speeds based on **real orbital periods**
-- 🌕 Moon orbiting Earth
-
-### 🌀 Smooth Orbital Animations
-- CSS-based rotations with adjustable speed
-- Each planet’s orbit speed scales proportionally
-
-### 🎛 Interactive Controls
-- ⏱ Orbit speed controller
-- 🎵 Background music play / pause
-- 🔊 Volume control
-
-### 🧭 3D Parallax Effect
-- Mouse movement rotates the scene in 3D space
-- Adds depth and realism
-
-### 🎉 New Year Celebration Message
-- Triggered when Earth completes **one full revolution**
-- Animated celebratory message
+- **Accurate Relative Orbital Speeds:** Each planet orbits at its Keplerian base period (from Mercury at 0.24 Earth years to Neptune at 165 Earth years).
+- **Smooth Speed Adjustments:** Smooth orbital interpolation calculated via `requestAnimationFrame` with zero phase jumping.
+- **Interactive 3D Parallax:** Orbit perspective tilts dynamically with mouse movement on desktop and touch drag on mobile devices.
+- **Celestial Audio Engine:** Ambient music with automatic Web Audio API synthesizer drone fallback for 100% offline playback.
+- **Interactive Planet Fact Cards:** Click or tap on any planet or the Sun to reveal astronomical specifications and discoveries.
+- **Orbit Counter & Celebration:** Dynamically counts Earth revolutions and celebrates the New Year 2026 milestone.
+- **Keyboard Shortcuts:**
+  - `Space`: Pause / Resume simulation
+  - `↑ / ↓`: Increase or decrease orbit speed
 
 ---
 
-### 📱 Fully Responsive
-Scales perfectly across desktop, tablet, and mobile screens
+## 🚀 Running Locally
 
-### 🎶 Background Space Music
-Ambient looping audio for immersion
+No build tools or servers required. Simply open `index.html` in any modern web browser:
 
----
+```bash
+# Clone the repository
+git clone https://github.com/ggthedeveloper/Solar-System-Simulation-HNY-2026.git
+cd Solar-System-Simulation-HNY-2026
 
-## 🛠 Technologies Used
-- **HTML5** – Structure
-- **CSS3**
-  - Animations & keyframes
-  - Gradients & shadows
-  - 3D transforms
-- **Vanilla JavaScript**
-  - Orbit speed control
-  - Event handling
-  - Dynamic resizing
-
-❌ No external frameworks required
-
----
-
-## 📂 Project Structure
-```
-├── index.html   # Main HTML structure
-├── style.css    # Styling, animations & visuals
-├── script.js    # Logic, interactions & controls
-└── README.md    # Project documentation
+# Open directly in your browser
+open index.html
 ```
 
-⚠️ **Note**  
-This project is intentionally self-contained in a single HTML file for easy sharing and deployment.
+---
+
+## 🛠️ Technology Stack
+
+- **HTML5:** Semantic markup with ARIA accessibility roles
+- **CSS3:** 3D CSS transforms (`preserve-3d`, `perspective`), starfield radial gradients, and responsive glassmorphism docks
+- **Vanilla JavaScript:** High-performance animation loop, Web Audio API synthesis, and multi-touch gesture handlers
 
 ---
 
-## 🚀 How to Run
-👉 **Live Demo**  
-https://ggthedeveloper.github.io/Solar-System-Simulation-HNY-2026/
+## 👨‍💻 Developer
 
-Simply open the link in any modern web browser.
-
----
-
-## 🎮 Controls Guide
-- ⏱ Speed Slider – Adjusts orbital speed of all planets
-- 🎵 Play / Pause – Toggles background music
-- 🔊 Volume Slider – Controls music volume
-- 🖱 Mouse Move – Rotates the solar system in 3D
-
----
-
-## 🌍 Educational Note
-Planet speeds are scaled proportionally using real orbital periods  
-(Mercury → Neptune).
-
----
-
-## 🧠 Customization Ideas
-- 🪨 Add an asteroid belt
-- 🏷 Include planet labels
-- 🔍 Add zoom controls
-- 🎶 Replace music with your own audio
-- 📱 Add touch controls for mobile
-- 🌐 Convert to Three.js for true 3D rendering
-
----
-
-## 👤 Author
-Gaurav Gautam
-
----
-
-## 📜 License
-Open for learning, personal use, and creative experimentation.  
-Feel free to fork, modify, and share with attribution.
-
----
-
-## 🌟 Quote
-**“One revolution, one year, endless possibilities.” 🌍  
-Happy New Year 2026! 🎆**
-
-              
-
+Developed by **Gaurav Gautam** (`ggthedeveloper`).

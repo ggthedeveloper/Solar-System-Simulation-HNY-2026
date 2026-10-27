@@ -3,57 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <title>Solar System – Happy New Year 2026</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Interactive 3D Solar System simulation celebrating Happy New Year 2026, with Keplerian orbital velocities, celestial audio, and planet facts.">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="controls">
-  ⏱ Speed <input type="range" min=".2" max="5" step=".1" value="1" id="speed">
-  <br>
-  <button id="musicBtn">Play Music</button>
-  🔊 <input type="range" min="0" max="1" step=".05" value=".2" id="volume">
-</div>
+<!-- Header Controls -->
+<nav class="controls" aria-label="Simulation Controls">
+  <div class="control-group">
+    <label for="speed">⏱ Speed</label>
+    <input type="range" min="0.2" max="5" step="0.1" value="1" id="speed" aria-label="Simulation Speed">
+  </div>
 
-<div class="stars"></div>
+  <button class="btn" id="pauseBtn" aria-label="Pause or Resume simulation">⏸ Pause</button>
+  <button class="btn btn-primary" id="musicBtn" aria-label="Play or Pause music">🎵 Play Music</button>
 
-<div class="scene" id="scene">
-  <div class="system">
-    <div class="sun"></div>
+  <div class="control-group">
+    <label for="volume">🔊</label>
+    <input type="range" min="0" max="1" step="0.05" value="0.2" id="volume" aria-label="Audio Volume">
+  </div>
 
-    <div class="orbit" data-size=".17" data-base=".24"><div class="planet mercury"></div></div>
-    <div class="orbit" data-size=".22" data-base=".62"><div class="planet venus"></div></div>
+  <button class="btn" id="resetViewBtn" aria-label="Reset perspective tilt">🔄 Reset Tilt</button>
+</nav>
+
+<!-- Starfield Background -->
+<div class="stars" aria-hidden="true"></div>
+
+<!-- 3D Orbiting Stage -->
+<main class="scene" id="scene">
+  <div class="system" role="region" aria-label="Solar System Viewport">
+    <div class="sun" title="The Sun — Click for facts" role="button" tabindex="0"></div>
+
+    <div class="orbit" data-size=".17" data-base=".24">
+      <div class="planet mercury" title="Mercury" role="button" tabindex="0"></div>
+    </div>
+    <div class="orbit" data-size=".22" data-base=".62">
+      <div class="planet venus" title="Venus" role="button" tabindex="0"></div>
+    </div>
 
     <div class="orbit earth-orbit" data-size=".28" data-base="1">
-      <div class="planet earth">
+      <div class="planet earth" title="Earth" role="button" tabindex="0">
         <div class="moon-orbit">
-          <div class="moon"></div>
+          <div class="moon" title="The Moon"></div>
         </div>
       </div>
     </div>
 
-    <div class="orbit" data-size=".33" data-base="1.88"><div class="planet mars"></div></div>
-    <div class="orbit" data-size=".44" data-base="11.86"><div class="planet jupiter"></div></div>
-    <div class="orbit" data-size=".53" data-base="29.4"><div class="planet saturn"></div></div>
-    <div class="orbit" data-size=".64" data-base="84"><div class="planet uranus"></div></div>
-    <div class="orbit" data-size=".75" data-base="165"><div class="planet neptune"></div></div>
+    <div class="orbit" data-size=".33" data-base="1.88">
+      <div class="planet mars" title="Mars" role="button" tabindex="0"></div>
+    </div>
+    <div class="orbit" data-size=".44" data-base="11.86">
+      <div class="planet jupiter" title="Jupiter" role="button" tabindex="0"></div>
+    </div>
+    <div class="orbit" data-size=".53" data-base="29.4">
+      <div class="planet saturn" title="Saturn" role="button" tabindex="0"></div>
+    </div>
+    <div class="orbit" data-size=".64" data-base="84">
+      <div class="planet uranus" title="Uranus" role="button" tabindex="0"></div>
+    </div>
+    <div class="orbit" data-size=".75" data-base="165">
+      <div class="planet neptune" title="Neptune" role="button" tabindex="0"></div>
+    </div>
   </div>
+</main>
+
+<!-- Orbit Counter Badge -->
+<div class="orbit-counter" id="orbitCount" aria-live="polite">
+  Earth Year: <strong>2026</strong> (Orbiting...)
 </div>
 
-<div class="message" id="msg">
-  <h1>🎉 Happy New Year 2026 🎉</h1>
-  <p>Earth completed one real revolution around the Sun</p>
-  <p style="margin-top:10px;color:#49e62e">Created by: Gaurav Gautam</p>
-</div>
+<!-- Planet Astronomical Fact Card -->
+<aside class="planet-card" id="planetCard" role="dialog" aria-modal="false" aria-labelledby="cardTitle">
+  <h3>
+    <span id="cardTitle">Planet</span>
+    <button class="close-btn" onclick="closePlanetCard()" aria-label="Close card">✕</button>
+  </h3>
+  <p id="cardText">Celestial body information.</p>
+</aside>
 
-<audio id="bgMusic" loop>
-  <source src="https://cdn.freesound.org/previews/670/670094_5479102-lq.mp3">
+<!-- New Year Celebration Modal -->
+<section class="message" id="msg" role="dialog" aria-modal="true" aria-labelledby="hnyTitle">
+  <h1 id="hnyTitle">🎉 Happy New Year 2026 🎉</h1>
+  <p>Earth has completed a full real revolution around the Sun!</p>
+  <p style="margin-top:8px;color:#4ade80;font-weight:500">Created by: Gaurav Gautam</p>
+  <button class="msg-close-btn" onclick="dismissCelebration()">Continue Exploring 🚀</button>
+</section>
+
+<!-- Audio Stream (With Web Audio synthesis fallback) -->
+<audio id="bgMusic" loop preload="none">
+  <source src="https://cdn.freesound.org/previews/670/670094_5479102-lq.mp3" type="audio/mpeg">
 </audio>
 
-<!-- JS -->
 <script src="script.js"></script>
 </body>
 </html>
